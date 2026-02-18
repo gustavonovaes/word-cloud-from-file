@@ -1,0 +1,166 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.page .container {
+  display: flex;
+  flex-direction: column;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.page h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page .grid {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+}
+
+.word-cloud-container {
+  height: 16rem;
+  overflow: scroll;
+  flex-grow: 1;
+}
+
+.word-cloud-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16rem;
+}
+
+.word-cloud-spinner {
+  border-radius: 9999px;
+  height: 3rem;
+  width: 3rem;
+  border-bottom: 2px solid #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+.word-cloud-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16rem;
+  color: #6b7280;
+}
+
+.word-cloud-empty p {
+  text-align: center;
+}
+
+.file-uploader form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.file-uploader .error {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.file-uploader .error-general {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.file-uploader input {
+  height: auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.excluded-words-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.excluded-words-input label {
+  font-weight: 500;
+  color: #111827;
+}
+
+.textarea-input {
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: inherit;
+  outline: none;
+  resize: vertical;
+}
+
+.textarea-input:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+
+.textarea-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.textarea-input::placeholder {
+  color: #6b7280;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
